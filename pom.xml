@@ -1,0 +1,54 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.myproject</groupId>
+  <artifactId>aws-infra</artifactId>
+  <version>0.0.100-SNAPSHOT</version>
+  <name>project infra in aws</name>
+    <scm>
+        <url>https://github.com/DigitalSword123/my-project-param-store</url>
+        <connection>scm:git@github.com:DigitalSword123/my-project-param-store.git</connection>
+        <tag>aws-infra-tf-0.0.1</tag>
+    </scm>
+   <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>artifactory-releases</name>
+            <url></url>
+        </repository>
+        <snapshotRepository>
+            <id>releases</id>
+            <name>artifactory-snapshots</name>
+            <url></url>
+        </snapshotRepository>
+   </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+            <execution>
+                <id>create-zip</id>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+                <configuration>
+                    <descriptor>${project.basedir}/terraform-zip.xml</descriptor>
+                    <formats>zip</formats>
+                </configuration>
+            </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
