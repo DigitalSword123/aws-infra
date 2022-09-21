@@ -15,14 +15,16 @@
                     <exclude>*-zip.xml</exclude>
                 </excludes>
             </fileSet>
-                <directory>${project.basedir}/vars</directory>
-                <outputDirectory></outputDirectory>
+            <fileSet>
+                <directory>${project.basedir}</directory>
+                <outputDirectory>dist-aws-infra</outputDirectory>
                 <excludes>
                     <exclude>*-zip</exclude>
                 </excludes>
                 <includes>
                     <include>*</include>
                 </includes>
+            </fileSet>
             <fileSet>
             </fileSet>
         </fileSets>
