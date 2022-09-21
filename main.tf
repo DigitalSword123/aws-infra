@@ -29,6 +29,6 @@ resource "aws_s3_bucket_notification" "s3eventnotification"{
     topic_arn=aws_sns_topic.aws_updates.arn
     events=["s3:ObjectCreated:*"]
     filter_prefix="test/"
-    filter_suffix=".xml"
+    filter_suffix=".json"
   }
 }

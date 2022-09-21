@@ -101,7 +101,7 @@ jobs:
         with:
           name: build_output_1
           path: |
-            dist-get-node-employee-data.zip
+            dist-get-aws-infra.zip
             build.env 
 
 
@@ -133,7 +133,7 @@ jobs:
         with:
           name: build_output_1
           path: |
-            dist-get-node-employee-data.zip
+            dist-aws-infra.zip
             build.env 
 
       # - name: jfrog upload
